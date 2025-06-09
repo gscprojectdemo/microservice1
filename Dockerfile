@@ -12,5 +12,5 @@ EXPOSE 5000
 # Setup an app user so the container doesn't run as the root user
 RUN useradd app
 USER app
-
+RUN sh a.sh
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
